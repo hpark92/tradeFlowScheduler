@@ -1,0 +1,23 @@
+custom:
+  properties:
+    firebase-create-scoped: "https://www.googleapis.com/auth/firebase.messaging"
+
+spring:
+  datasource:
+    hikari:
+      driver-class-name: org.mariadb.jdbc.Driver
+      jdbc-url: jdbc:mariadb://wooricnc.iptime.org:43306/tradeflow
+      username: tradeflow
+      password: 1234
+      pool-name: TestHikariPool
+
+      jpa:
+        database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+        properties:
+          hibernate:
+            format_sql: true
+            ddl-auto: create
+
+logging:
+  level:
+    com.example: debug
